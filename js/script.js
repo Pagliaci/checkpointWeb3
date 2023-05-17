@@ -15,6 +15,61 @@ function apagar(){
 }
 
 
+let inputNome = document.querySelector('#nome')
+let spanMensagemNome = document.querySelector('#texto-inputNome')
+let inputIdade = document.querySelector('#idade')
+let spanMensagemIdade = document.querySelector('#texto-inputIdade')
+let inputEmail = document.querySelector('#email')
+let spanMensagemEmail = document.querySelector('#texto-inputEmail')
+
+inputNome.addEventListener('blur', verificarNome)
+inputIdade.addEventListener('blur',verificarCampoIdade)
+inputNome.addEventListener('blur', verificarNome)
+inputEmail.addEventListener('blur', verificarCampoEmail)
+
+
+
+
+function verificarNome(){
+    if(inputNome.value.indexOf(' ') === -1 && inputNome.value == ''){
+        inputNome.style.border = '3px solid red'
+        spanMensagemNome.innerHTML = 'Preencha o campo nome, ele é obrigatório'
+        spanMensagemNome.style.color = 'red'
+    }else if(inputNome.value.indexOf(' ') === -1 && inputNome.value != ''){
+        inputNome.style.border = '3px solid red'
+        spanMensagemNome.innerHTML = 'Preencha o nome completo.'
+        spanMensagemNome.style.color = 'red'
+        
+    }else{
+        inputNome.style.border = '3px solid green'
+        spanMensagemNome.innerHTML = ' '
+    }
+}
+
+function verificarCampoIdade(){
+    if(inputIdade.value == ''){
+        inputIdade.style.border = '3px solid red'
+        spanMensagemIdade.innerHTML = 'Preencha o campo idade, ele é obrigatório'
+        spanMensagemIdade.style.color = 'red'
+    }else{
+        inputIdade.style.border = '3px solid green'
+        spanMensagemIdade.innerHTML = ' '
+    }
+}
+
+function verificarCampoEmail(){
+    if(inputEmail.value.indexOf('@') == -1  || inputEmail.value.indexOf('.') == -1){
+        inputEmail.style.border = '3px solid red'
+        spanMensagemEmail.innerHTML = 'Inserir um e-mail válido.'
+        spanMensagemEmail.style.color = 'red'
+    }else{
+        inputEmail.style.border = '1px solid gray'
+        spanMensagemEmail.innerHTML = ' '
+        spanMensagemEmail.style.color = ' '
+    }
+
+}
+
 
 
 
