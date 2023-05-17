@@ -1,6 +1,4 @@
-let num1 = document.querySelector('#num1')
-let num2 = document.querySelector('#num2')
-let executar = document.querySelector('#executar')
+
 
 
 let lampada = document.querySelector('#lampada')
@@ -107,6 +105,9 @@ function apagar(){
 
 
 
+
+
+
 let textoquestao4 = document.querySelector('#texto4')
 let titulo = document.querySelector('#titulo')
 textoquestao4.addEventListener('mouseenter',ficar_vermelho)
@@ -118,4 +119,29 @@ function ficar_vermelho(){
 
 function voltar_normal(){
     titulo.style.color = 'white'
+}
+
+
+
+let num1 = Number (document.querySelector('#num1').value)
+let num2 = Number (document.querySelector('#num2').value)
+let resultado = document.querySelector('#result')
+
+
+function conta(operacao){
+
+    if (operacao == "som"){
+        resultado.innerHTML = num1+num2
+    }
+    else if (operacao == "sub"){
+        resultado.innerHTML = (num1-num2)
+    }
+    else if (operacao == "div"){
+        resultado.innerHTML = (num1/num2)
+    }
+    else if (operacao == "mul"){
+        resultado.innerHTML = (num1*num2)
+    }
+    
+    
 }
