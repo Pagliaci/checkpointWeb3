@@ -178,28 +178,31 @@ function voltar_normal(){
 
 
 
-let num1 = Number (document.querySelector('#num1').value)
-let num2 = Number (document.querySelector('#num2').value)
+
 let resultado = document.querySelector('#result')
 
 
-function conta(operacao){
-
-    if (operacao == "som"){
+function acao(tipo){
+    let num1 = Number (document.querySelector('#num1').value)
+    let num2 = Number (document.querySelector('#num2').value)
+    if(tipo == 'som'){
         resultado.innerHTML = num1+num2
     }
-    else if (operacao == "sub"){
-        resultado.innerHTML = (num1-num2)
+   
+    else if(tipo == 'sub'){
+        resultado.innerHTML = num1-num2
     }
-    else if (operacao == "div"){
-        resultado.innerHTML = (num1/num2)
+
+    else if(tipo == 'div'){
+        resultado.innerHTML = num1/num2
     }
-    else if (operacao == "mul"){
-        resultado.innerHTML = (num1*num2)
+
+    else if(tipo == 'mul'){
+        resultado.innerHTML = num1*num2
     }
-    
-    
 }
+
+
 
 function questoes(){
     let nome = prompt('Qual o seu nome?')

@@ -15,11 +15,16 @@
       <section class="sec1">
         <div class="q1">
         <p><span class="nq">01</span> Crie input's para receber dois números e retornar sua soma, subtração, divisão ou multiplicação em um span. Crie botões com evento de click para executar a função.</p>
-        <label for="num1">1º número</label>
-        <input type="number" id="num1"><br>
-        <label for="num2">2º número</label>
+        <label for="num1">Número 1: </label>
+        <input type="number" id="num1"><br><br>
+
+        <label for="num2">Número 2: </label>
         <input type="number" id="num2"><br><br>
-        <button onclick = "conta('som')">Soma</button>
+
+        <button onclick="acao('som')">Somar</button>
+        <button onclick="acao('sub')">Subtrair</button>
+        <button onclick="acao('div')">Dividir</button>
+        <button onclick="acao('mul')">Multiplicar</button>
         <p>Resultado:</p><span id="result"></span>
       </div>
       <div class="q2">
